@@ -1,0 +1,49 @@
+###########################
+### BASIC DATA TYPES
+###########################
+
+###### Numbers
+d <- 1
+print(d)
+
+d <- 2 * d
+print(d)
+
+d <- d / 10
+print(d)
+
+###### Text a.k.a. string
+d <- 'Hello'
+print(d)
+
+d <- paste(d, 'World')
+
+###### Converting Text <-> Number
+# Check the type of data
+typeof(d)
+
+d <- 100
+d <- as.character(d)
+print(d)
+d <- as.numeric(d)
+print(d)
+
+d <- '200'
+d <- d/2
+d <- as.numeric(d)
+d <- d/2
+print(d)
+
+d <- 'Hello'
+d <- as.numeric(d)
+
+
+############ EXERCISE #####
+# 
+# Given someone's age and name, for example:
+# age <- 34
+# name <- 'Carole'
+# 
+# Make a sentence saying that "Carol is 34 year old."
+#
+###########################
