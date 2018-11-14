@@ -14,10 +14,6 @@ data_cbs %>%
 ########### EXERCISE #####
 # 
 # Select the columns that contain the growth rates.
-#
-# SOLUTION:
-# data_cbs %>%
-#   select(ends_with('Growth'))
 # 
 ###########################
 
@@ -38,13 +34,6 @@ data_cbs %>%
 # 
 # Make narrow data for all the growth rate indicators, 
 # and include the Label and Periods information.
-#
-# SOLUTION:
-# data_cbs %>%
-#   filter(Periods > 2001) %>%
-#   select(Label, Periods, ends_with('Growth')) %>%
-#   gather(Labour_Growth, Output_Growth, ValueAdded_Growth, 
-#          key='Indicator', value='Rate')
 # 
 ###########################
 
@@ -63,15 +52,6 @@ data_narrow %>% spread(Output, MEuro)
 # 
 # Given the narrow data for growth rate (resulting for the previous exercise),
 # make it wide again.
-#
-# SOLUTION:
-# data_narrow <- data_cbs %>%
-#   filter(Periods > 2001) %>%
-#   select(Label,Periods, ends_with('Growth')) %>%
-#   gather(Labour_Growth, Output_Growth, ValueAdded_Growth, 
-#          key='Indicator', value='Rate') 
-# 
-# data_narrow %>% spread(Indicator, Rate)
 # 
 ###########################
 

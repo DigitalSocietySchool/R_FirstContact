@@ -92,15 +92,7 @@ d$Animal[d$Animal == 'Cat']
 # 
 # 1. Filter the data frame to select only the users that are minor
 #
-# SOLUTION:
-# d[d$Age < 18, ]
-# d$Age[d$Age < 18]
-#
 # 2. Find the Animal of the users that are minor
-#
-# SOLUTION:
-# d[d$Age < 18, 5]
-# d$Animal[d$Age < 18]
 #
 ###########################
 

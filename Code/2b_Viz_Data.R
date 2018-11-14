@@ -23,17 +23,6 @@ data_cbs %>%
 # 
 # Visualize the raw data (not growth rate) for columns Labour, Output, ValueAdded
 # using multiple lines.
-#
-# SOLUTION:
-# data_cbs %>%
-#   filter(Periods > 2001) %>%
-#   mutate(Labour = Labour*1000) %>%
-#   gather(Labour, Output, ValueAdded, 
-#          key='Indicator', value='Rate') %>%
-#   ggplot(aes(Periods, Rate, shape=Indicator, col=Indicator)) + 
-#   facet_wrap( ~ Label, ncol=3, scales='free') +
-#   geom_point(alpha=0.5) + geom_line(alpha=0.35) +
-#   ggtitle('Unit of Labour: Year of Employement - Output & Added Value: Million Euros')
 # 
 ###########################
 
@@ -59,37 +48,12 @@ data_cbs %>%
 # 1. Make a visualization for comparing Output Vs Valued Added
 # for each economic activity separately.
 #
-# SOLUTION:
-# data_cbs %>% 
-#   filter(Periods > 2001) %>%
-#   ggplot(aes(Output_Growth, ValueAdded_Growth, col=Label)) + 
-#   facet_wrap( ~ Label, ncol=3, scales='free') 
-#   geom_point(alpha=0.7) + geom_line(alpha=0.35) +
-#   geom_abline(intercept = 0, slope = 1, color="grey", 
-#               linetype="dashed", size=0.5)
-#
 #
 # 2. Make a visualization for comparing the growth rates of Labour and ValueAdded.
-#
-# data_cbs %>%
-#   filter(Periods > 2001) %>%
-#   ggplot(aes(Labour_Growth, ValueAdded_Growth, col=Label)) +
-#   facet_wrap( ~ Label, ncol=3, scales='free') 
-#   geom_point(alpha=0.7) + geom_line(alpha=0.35) +
-#   geom_abline(intercept = 0, slope = 1, color="grey",
-#               linetype="dashed", size=0.5)
 #
 #
 # 3. Make a visualization for comparing the growth rates of Labour and Output.
 #
-# data_cbs %>%
-#   filter(Periods > 2001) %>%
-#   ggplot(aes(Labour_Growth, Output_Growth, col=Label)) +
-#   facet_wrap( ~ Label, ncol=3, scales='free') 
-#   geom_point(alpha=0.7) + geom_line(alpha=0.35) +
-#   geom_abline(intercept = 0, slope = 1, color="grey",
-#               linetype="dashed", size=0.5)
-# 
 # Bonus: Try the visualizatin with and without the option scales='free'
 #
 ###########################

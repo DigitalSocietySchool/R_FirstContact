@@ -68,11 +68,6 @@ data_cbs$Periods <- as.numeric(data_cbs$Periods)
 # 
 # Format the Labour column into numerical data type
 # Hint: with R numbers must be separated by a dot '.' and not by a comma ','
-# 
-# SOLUTION:
-# data_cbs$Labour %>% head
-# data_cbs$Labour <- gsub(',','.', data_cbs$Labour)
-# data_cbs$Labour <- as.numeric(data_cbs$Labour)
 #
 #
 ###########################
@@ -96,17 +91,6 @@ data_cbs %>%
 ############ EXERCISE #####
 # 
 # Do the same visualization for the columns Output and ValueAdded.
-# 
-# SOLUTION:
-# data_cbs %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# data_cbs %>% 
-#   ggplot(aes(Periods, ValueAdded., col=Activities)) + 
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded.')
 #
 ###########################
 
@@ -120,19 +104,6 @@ data_cbs %>%
 ############ EXERCISE #####
 # 
 # Do the same visualization for the columns Output and ValueAdded.
-# 
-# SOLUTION:
-# data_cbs %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3) +
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# data_cbs %>% 
-#   ggplot(aes(Periods, ValueAdded, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3) +
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded')
 #
 ###########################
 
@@ -146,19 +117,6 @@ data_cbs %>%
 ############ EXERCISE #####
 # 
 # Do the same visualization for the columns Output and ValueAdded.
-# 
-# SOLUTION:
-# data_cbs %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3, scales='free') +
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# data_cbs %>% 
-#   ggplot(aes(Periods, ValueAdded, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3, scales='free') +
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded')
 #
 ###########################
 
@@ -169,76 +127,7 @@ data_cbs %>%
 # Hint: we need to exclude the lines for which the column Activities 
 # contains the label 'Total sector environment'.
 # 
-# SOLUTION:
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% head
-# 
 # 2. Re-run the visualization after filtering out the data for all activities.
-# 
-# SOLUTION:
-# 
-# ###### Labour Without Total
-# # All-in-One
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Labour, col=Activities)) + 
-#   geom_point() + geom_line()  +
-#   ggtitle('Labour')
-# 
-# # Separate in panels
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Labour, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3) +
-#   geom_point() + geom_line()  +
-#   ggtitle('Labour')
-# 
-# # Use different scales for the y-axis
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Labour, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3, scales='free') +
-#   geom_point() + geom_line()  +
-#   ggtitle('Labour')
-# 
-# ###### Output Without Total
-# # All-in-One
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# # Separate in panels
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3) +
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# # Use different scales for the y-axis
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, Output, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3, scales='free') +
-#   geom_point() + geom_line()  +
-#   ggtitle('Output')
-# 
-# 
-# ########### ValueAdded Without Total
-# # All-in-One
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, ValueAdded, col=Activities)) + 
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded')
-# 
-# # Separate in panels
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, ValueAdded, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3) +
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded')
-# 
-# # Use different scales for the y-axis
-# data_cbs[data_cbs$Activities != 'Total sector environment',] %>% 
-#   ggplot(aes(Periods, ValueAdded, col=Activities)) + 
-#   facet_wrap( ~ Activities, ncol=3, scales='free') +
-#   geom_point() + geom_line()  +
-#   ggtitle('ValueAdded')
 # 
 ###########################
 

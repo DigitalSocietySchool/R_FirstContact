@@ -56,13 +56,6 @@ if( !d ){
 # Make a test (with if-then-else) that tells you when someone is minor 
 # (less than 18 year old)
 #
-# SOLUTION:
-# if( age < 18) {
-#   print("This person is minor.")
-# } else {
-#   print("This person is adult.")
-# }
-#
 ###########################
 
 ###########################
@@ -127,26 +120,9 @@ print(minors)
 # 1. Write a loop that browse the table, and "prints" a sentence 
 # describing the user's name and favorite color.
 #
-# SOLUTION:
-# for(i in 1:nrow(d) ){
-#   sentence <- paste(d$Name[i], 'likes the color', d$Color[i])
-#   print(sentence)
-# }
-#
 # 
 # 2. Write a loop that describes whether users are minor or adults, 
 # and their favorite food.
-#
-# SOLUTION:
-# for(i in 1:nrow(d) ){
-#   if(d$Age[i] < 18){
-#     sentence <- paste(d$Name[i], 'is a minor')
-#   } else {
-#     sentence <- paste(d$Name[i], 'is an adult')
-#   }
-#   sentence <- paste(sentence, 'that likes to eat', d$Food[i])
-#   print(sentence)
-# }
 #
 # Tip: use paste0() instead of paste() if you do not want extra spaces 
 # when constructing sentences.
@@ -187,50 +163,14 @@ print(number)
 # 3  3 Charlotte  Black Orange    Pig  21
 # 4  4    Daniel Orange   Pear    Cat  17
 #
-# SOLUTION:
-# print_color <- function(d){
-#   for(i in 1:nrow(d) ){
-#     sentence <- paste(d$Name[i], 'likes the color', d$Color[i])
-#     print(sentence)
-#   }
-# }
-# print_color(d)
-#
 # 2. Make a function that takes our table d and find the oldest user.
-#
-# SOLUTION:
-# find_oldest <- function(d){
-#   max_index <- 1
-#   for(i in 1:nrow(d)){
-#     if(d$Age[i] > d$Age[max_index]){
-#       max_index <- i
-#     }
-#   }
-#   return(d[max_index,])
-# }
-# find_oldest(d)
 # 
 # 3. Given the function max() below:
 #   max(d$Age)
 # Write a 1-line piece of code that will find the oldest user.
 # (without using the function of EXERCISE 2.)
 #
-# SOLUTION:
-# d[d$Age==max(d$Age),]
-#
 # 
 # 4. Write your own function max_age()
-#
-# SOLUTION:
-# max_age <- function(age){
-#   max <- 0
-#   for(a in age){
-#     if(a > max){
-#       max <- a
-#     }
-#   }
-#   return(max)
-# }
-# d[d$Age==max_age(d$Age),]
 # 
 ###########################
