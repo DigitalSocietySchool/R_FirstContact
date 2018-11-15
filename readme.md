@@ -8,7 +8,7 @@ Start programming with R without headache! You will learn to handle datasets and
 
 - What is R? Why use it?
 - Read datasets of different format (CSV, spreadsheet, JSON, PDF, maybe more)
-- Inspect datasets (dataframe and datatable formats, filter columns and rows, browse rows with loops).
+- Inspect datasets (dataframe and tibble formats, filter columns and rows, browse rows with loops).
 - Make simple visualizations.
 - Export datasets & visualizations.
 - Data quality issues (missing data, provenance, sampling issues, biases)
