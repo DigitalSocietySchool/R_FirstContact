@@ -12,6 +12,7 @@
 # Once a library is installed on your computer,
 # you don't need to install it every time your execute R code.
 # So, first check if a library is installed, or else we will re-installing it
+
 if(!require('tidyverse')) install.packages('tidyverse')
 # Load the package
 library(tidyverse) 
@@ -19,7 +20,7 @@ library(tidyverse)
 if(!require('stringr')) install.packages('stringr')
 library(stringr) 
 
-# You need to load it every time you execute R code.
+# You need to load packages every time you execute R code.
 
 ############ EXERCISE #####
 # 
