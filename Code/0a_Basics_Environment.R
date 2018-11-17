@@ -1,13 +1,4 @@
 ###########################
-### WORKING DIRECTORY
-###########################
-# In R-studio menu: Session -> Set Working Directory -> To Source File Location
-
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-
-###########################
-
-###########################
 ### LIBRARIES (also called packages)
 ###########################
 ### TIDYVERSE 
@@ -16,17 +7,16 @@ setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 # Check https://tidyverse.org/
 
 ###### Install a library
-install.packages('tidyverse')
+# install.packages('tidyverse')
 
 # Once a library is installed on your computer,
 # you don't need to install it every time your execute R code.
-
-# First check if a library is installed, or else we will re-installing it
+# So, first check if a library is installed, or else we will re-installing it
 if(!require('tidyverse')) install.packages('tidyverse')
-if(!require('stringr')) install.packages('stringr')
-
-###### Load a library
+# Load the package
 library(tidyverse) 
+
+if(!require('stringr')) install.packages('stringr')
 library(stringr) 
 
 # You need to load it every time you execute R code.
@@ -39,11 +29,22 @@ library(stringr)
 #
 # SOLUTION:
 # if(!require('rvest')) install.packages('rvest')
-# library(tidyverse) 
+# library(rvest) 
 #
 # Full list of all libraries:
 # https://cran.r-project.org/web/packages/available_packages_by_name.html
 #
+###########################
+
+###########################
+### WORKING DIRECTORY
+###########################
+# In R-studio menu: Session -> Set Working Directory -> To Source File Location
+
+if(!require('rstudioapi')) install.packages('rstudioapi')
+library(rstudioapi) 
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
 ###########################
 
 ###########################
