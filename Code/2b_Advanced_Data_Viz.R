@@ -1,44 +1,10 @@
 # data_cbs <- read.csv('../Data/CBS_Growth_Rates.csv') %>% tibble
 
-###########################
-### PLOT MULTIPLE LINES
-###########################
-
-data_cbs %>% 
-  # Exclude years without growth rate data
-  filter(Periods > 2001) %>%
-  ggplot(aes(Periods, Output_Growth, col=Label)) + 
-  facet_wrap( ~ Label, ncol=3) + #
-  geom_point(alpha=0.5) + geom_line(alpha=0.35)
-
-
-############ Visualize using Narrow Data ############ 
-data_cbs %>%
-  filter(Periods > 2001) %>%
-  # Filter growth rate data
-  select(Label, Periods, ends_with('Growth')) %>%
-  # Make narrow data
-  gather(Labour_Growth, Output_Growth, ValueAdded_Growth, 
-         key='Indicator', value='Rate') %>%
-  # Now we can plot multiple lines
-  ggplot(aes(Periods, Rate, shape=Indicator, col=Indicator)) + 
-  facet_wrap( ~ Label, ncol=3) + # Option: scales='free'
-  geom_point(alpha=0.5) + geom_line(alpha=0.35)
-
-
-########### EXERCISE #####
-# 
-# Visualize the raw data (not growth rate) for columns Labour, Output, ValueAdded
-# using multiple lines.
-#
-###########################
-
 
 ###########################
 ### VISUALIZE 2 VARIABLES
 ###########################
-# Check relationship between 
-# Output and Valued Added
+# Check relationship between Output and Valued Added
 
 ### Growth Rates
 data_cbs %>% 
