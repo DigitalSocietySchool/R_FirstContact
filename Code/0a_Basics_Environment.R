@@ -20,7 +20,7 @@
 # Once a library is installed, you don't need to install it every time your execute R code.
 # So, first check if a library is installed, or else we will re-installing it
 
-# Install tidyverse
+# Install stringr
 if(!require('stringr')) install.packages('stringr')
 
 ######  Load a library
